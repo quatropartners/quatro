@@ -1767,6 +1767,22 @@ html, body {
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
+/* --- Fix para superposición y corte de secciones --- */
+section {
+  height: auto !important;
+  min-height: auto !important;
+  scroll-snap-align: none !important;
+}
+
+.services-section {
+  padding-bottom: 100px !important;
+  overflow: visible !important;
+  margin-top: 80px !important;
+}
+
+.service-card {
+  height: auto !important;
+}
 
 /* --- Secciones principales --- */
 section {
