@@ -289,14 +289,10 @@ h6 {
   position: relative;
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding-top: 130px; /* para evitar que el header lo tape */
-  box-sizing: border-box; /* Importante para padding y height */
-}
+  
 
-.overlay {
+
  .overlay {
     position: absolute; /* Mantenemos. Cubre el Hero */
     top: 0;
