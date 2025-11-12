@@ -295,7 +295,7 @@ h6 {
     display: flex; /* Asegura que siga siendo flex */
     align-items: center; /* Para centrar verticalmente el overlay */
     justify-content: center; /* Para centrar horizontalmente el overlay */
-    padding-top: 100px; /* Mantener por el header fijo */
+    padding-top: 130px; /* Mantener por el header fijo */
     box-sizing: border-box; /* Importante para padding y height */
 }
 
@@ -322,6 +322,10 @@ h6 {
     /* Elimina cualquier height fijo o max-height si lo tienes */
     /* height: auto; */
     /* max-height: none; */
+  padding: 2rem 0;
+    z-index: 3; /* <-- ¡ESTE ES EL CAMBIO CLAVE! Que esté por encima del overlay */
+    position: relative; /* Necesita position: relative/absolute/fixed para que z-index funcione */
+}
 }
 
 .hero-title {
@@ -329,6 +333,8 @@ h6 {
   font-weight: 800;
   margin-bottom: 1.5rem;
   color: #ede8f0;
+  position: relative;
+  z-index: 4;
 }
 
 .hero-description {
@@ -336,6 +342,8 @@ h6 {
   margin-bottom: 2rem;
   line-height: 1.6;
   color: #ede8f0;
+  position: relative;
+  z-index: 4;
 }
 
 .hero-bg-img {
