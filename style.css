@@ -370,6 +370,19 @@ h6 {
   }
 }
 
+/* Desktop (2 columnas) */
+.enfoque-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* ... */
+}
+
+/* Mobile (1 columna) */
+@media (max-width: 768px) {
+    .enfoque-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .team-member {
   background-color: var(--white);
   border-radius: 1rem;
@@ -2421,4 +2434,52 @@ section {
     padding-bottom: 160px !important;
   }
 }
+.hero {
+    /* Mantén 100vh si es el objetivo, pero sé consciente de que puede cortar */
+    /* position: relative;
+    width: 100%;
+    height: 100vh; */
 
+    /* Alternativa para permitir que el contenido dicte la altura, pero con un mínimo grande: */
+    min-height: 80vh; /* Ocupa al menos el 80% de la vista, pero puede crecer */
+    height: auto;
+    
+    padding-top: 100px; /* El padding superior está bien para el header fijo */
+}
+
+/* ==== FILA DE EQUIPO - YA ES FLEXBOX EN TU CÓDIGO ==== */
+.team-row {
+    display: flex; /* Asegúrate que es flex */
+    justify-content: center;
+    flex-wrap: wrap; /* Esencial para que salte a la siguiente línea */
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto; /* Centrar correctamente */
+}
+
+/* Cada miembro se comporta como un item flexible */
+.contact-member {
+    flex: 1 1 200px; /* Crece (1), se encoge (1), base 200px */
+    max-width: 220px;
+    text-align: left; /* Mantener la alineación si el diseño lo requiere */
+}
+
+/* --- Responsive con Flexbox --- */
+/* Tablet y Móvil más grande (Permite 2 o 3 por fila) */
+@media (max-width: 992px) {
+    .contact-member {
+        flex: 1 1 40%; /* 2 por fila */
+        max-width: 45%;
+    }
+}
+
+/* Móvil Pequeño (1 por fila) */
+@media (max-width: 500px) {
+    .contact-member {
+        flex: 1 1 100%; /* 1 por fila */
+        max-width: 100%;
+        align-items: center; /* Si quieres centrar el contenido */
+        text-align: center; /* Centrar el texto en móvil */
+    }
+}
