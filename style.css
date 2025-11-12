@@ -289,7 +289,6 @@ h6 {
   position: relative;
   width: 100%;
   height: 100vh;
-  background: url('hero.JPG') no-repeat center center/cover; !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -297,7 +296,7 @@ h6 {
 }
 
 .overlay {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -307,6 +306,7 @@ h6 {
   align-items: center;
   justify-content: center;
   padding: 0 2rem;
+  z-index: 2;
 }
 
 .hero-content.centered {
@@ -329,6 +329,16 @@ h6 {
   margin-bottom: 2rem;
   line-height: 1.6;
   color: #ede8f0;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que cubra todo el espacio */
+    z-index: 1; /* Para que quede detrás del overlay */
 }
 
 .btn.btn-primary {
