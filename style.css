@@ -2029,3 +2029,61 @@ footer {
   }
 }
 
+/* ====== SECCIÓN SERVICIOS (ajuste de posición y tamaño) ====== */
+.services-section {
+  position: relative;
+  background-color: #fbf9ed;
+  padding: 10rem 2rem 5rem; /* 🔹 más espacio arriba para bajarla un poco más */
+  margin-top: 6rem; /* 🔹 separa del hero o CTA anterior */
+  text-align: center;
+  z-index: 1;
+}
+
+/* Título y descripción */
+.services-section .section-title {
+  font-size: 2rem; /* 🔹 antes 2.5rem — más equilibrado */
+  color: #735f7a;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.services-section .section-description {
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1rem;
+}
+
+/* Tarjetas dentro de servicios */
+.service-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Asegurar que el hero no tape la sección siguiente */
+.hero {
+  z-index: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .services-section {
+    padding-top: 12rem; /* 🔹 más espacio aún en móviles */
+  }
+
+  .services-section .section-title {
+    font-size: 1.5rem; /* 🔹 más pequeño en pantallas chicas */
+  }
+
+  .services-section .section-description {
+    font-size: 0.95rem;
+  }
+}
