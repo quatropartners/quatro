@@ -171,7 +171,7 @@ h6 {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(128, 110, 136, 0.1);
   z-index: 1000;
-  height: 130px;
+  height: 100px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -197,12 +197,12 @@ h6 {
 
 /* Logo */
 .logo {
-   height: 250px;
+   height: 150px;
   width: auto;
 }
 
 .logo-container {
-  margin-left: -7rem;;
+  margin-left: 0rem;;
 }
 
 /* ---------------- NAV (DESKTOP OPCIONAL) ---------------- */
@@ -245,7 +245,7 @@ h6 {
 /* ---------------- MENÚ MOBILE ---------------- */
 .mobile-menu {
   position: fixed;
-  top: 100px; /* mismo alto que el header */
+  top: 70px; /* mismo alto que el header */
   left: 0;
   right: 0;
   background-color: white;
@@ -1719,7 +1719,7 @@ html {
 /* --- Ajustes para versión móvil --- */
 @media (max-width: 768px) {
   .logo {
-    height: 120px;         /* 🔹 mucho más pequeño */
+    height: 60px;         /* 🔹 mucho más pequeño */
     width: auto;
   }
 
@@ -1728,7 +1728,7 @@ html {
   }
 
   .header {
-    height: 90px;         /* 🔹 header más compacto */
+    height: 70px;         /* 🔹 header más compacto */
   }
 
   .container-header {
