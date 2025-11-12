@@ -2073,19 +2073,6 @@ footer {
 }
 
 /* ====== Imagen ====== */
-.hero-image {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.hero-image img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-}
 
 /* ====== Botón ====== */
 .btn-vermas {
