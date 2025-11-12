@@ -1763,7 +1763,6 @@ a,
 /* --- Scroll snap global --- */
 html, body {
   margin: 0;
-  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: scroll;
 }
@@ -1786,8 +1785,7 @@ section {
 
 /* --- Secciones principales --- */
 section {
-  height: 100vh;
-  scroll-snap-align: start;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
