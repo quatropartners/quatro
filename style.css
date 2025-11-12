@@ -2069,9 +2069,7 @@ footer {
 }
 
 /* Asegurar que el hero no tape la sección siguiente */
-.hero {
-  z-index: 0;
-}
+
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
