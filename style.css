@@ -2241,3 +2241,39 @@ footer {
   padding-top: 4rem;
 }
  
+/* ==== FIX: eliminar alto fijo en secciones ==== */
+html, body {
+  scroll-snap-type: none !important;
+}
+
+section {
+  height: auto !important;
+  min-height: auto !important;
+  scroll-snap-align: none !important;
+  overflow: visible !important;
+}
+
+/* ==== FIX: evitar corte de tarjetas ==== */
+.services-section {
+  position: relative !important;
+  margin-top: 120px !important;
+  padding-top: 60px !important;
+  padding-bottom: 120px !important;
+  overflow: visible !important;
+  z-index: 5 !important;
+  background-color: #fefefe !important;
+}
+
+.service-card {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.hero {
+  position: relative;
+  z-index: 0 !important;
+}
+
+.services-section {
+  z-index: 2 !important;
+}
