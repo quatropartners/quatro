@@ -2347,3 +2347,78 @@ section {
     padding-bottom: 160px !important;
   }
 }
+
+/* ==== FIX DEFINITIVO HERO + SERVICIOS EN MÓVILES ==== */
+
+/* Evita que el hero se solape con servicios */
+.hero {
+  position: relative !important;
+  min-height: 100dvh !important; /* usa dynamic viewport height (moderno y correcto) */
+  height: auto !important;
+  padding: 120px 0 80px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 0 !important;
+}
+
+.hero img.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Asegura que overlay no tape el contenido siguiente */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Hero content siempre encima */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sección servicios debajo del hero con espacio */
+.services-section {
+  position: relative !important;
+  margin-top: 0 !important;
+  padding-top: 80px !important;
+  padding-bottom: 140px !important;
+  overflow: visible !important;
+  z-index: 5 !important;
+  background-color: #fefefe;
+}
+
+/* Tarjetas ajustadas */
+.service-card {
+  height: auto !important;
+  overflow: visible !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Evita recorte de imágenes */
+.service-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Mobile específico */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100dvh !important;
+    padding: 100px 20px 60px !important;
+  }
+
+  .services-section {
+    padding-top: 100px !important;
+    padding-bottom: 160px !important;
+  }
+}
+
