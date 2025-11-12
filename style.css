@@ -312,7 +312,9 @@ h6 {
 .hero-content.centered {
   text-align: center;
   color: white;
+  width: 100%;
   max-width: 800px;
+  width: 100%;
 }
 
 .hero-title {
@@ -2229,7 +2231,7 @@ footer {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   .services-section {
-    padding-top: 12rem; /* 🔹 más espacio aún en móviles */
+    padding-top: 20rem; /* 🔹 más espacio aún en móviles */
   }
 
   .services-section .section-title {
