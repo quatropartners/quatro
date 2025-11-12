@@ -292,33 +292,34 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px; /* para evitar que el header lo tape */
+  padding-top: 130px; /* para evitar que el header lo tape */
   box-sizing: border-box; /* Importante para padding y height */
 }
 
 .overlay {
- position: absolute; /* Cambia a absolute para que se posicione sobre la imagen */
+ .overlay {
+    position: absolute; /* Mantenemos. Cubre el Hero */
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%; /* Asegura que el overlay ocupe todo el hero */
-    background-color: rgba(15, 23, 42, 0.6); /* Color y opacidad del overlay */
-    display: flex; /* Para centrar el contenido interno */
+    width: 100%; /* Mantenemos */
+    height: 100%; /* Mantenemos. Asegura que cubra todo el Hero */
+    
+    /* HACEMOS EL CENTRADO FLEXBOX AQUÍ: */
+    display: flex;
     align-items: center; /* Centrado vertical del contenido */
     justify-content: center; /* Centrado horizontal del contenido */
-    z-index: 2; /* Para que esté por encima de la imagen */
-    padding: 0 2rem; /* Mantén el padding interno */
-    box-sizing: border-box; /* Importante para el padding */
-}
+
+    padding: 0 2rem;
+    box-sizing: border-box;
+    z-index: 2;
 
 .hero-content.centered {
     text-align: center;
     color: white;
     max-width: 800px;
-    width: 100%; /* Asegura que ocupe el ancho disponible */
-    /* Elimina cualquier height fijo o max-height si lo tienes */
-    /* height: auto; */
-    /* max-height: none; */
+    width: 100%; /* El contenido debe ocupar el ancho completo para centrar su texto */
+    /* Añadimos padding vertical para que no se pegue arriba/abajo en la caja de 800px */
+    padding: 2rem 0; 
 }
 
 .hero-title {
@@ -336,13 +337,13 @@ h6 {
 }
 
 .hero-bg-img {
-    position: absolute;
+    position: absolute; /* Mantenemos. Cubre el Hero */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que cubra todo el espacio */
-    z-index: 1; /* Para que quede detrás del overlay */
+    object-fit: cover;
+    z-index: 1;
 }
 
 .btn.btn-primary {
