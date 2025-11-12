@@ -286,36 +286,42 @@ h6 {
 
 /* ---------------- HERO ---------------- */
 .hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  padding-top: 130px; /* para evitar que el header lo tape */
-  
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* ELIMINA ESTA LÍNEA (O COMENTARLA) */
+    /* background: url('hero.jpg') no-repeat center center/cover; */
+    /* ...mantén el resto de propiedades de .hero, como display:flex, align-items:center, etc. */
+    display: flex; /* Asegura que siga siendo flex */
+    align-items: center; /* Para centrar verticalmente el overlay */
+    justify-content: center; /* Para centrar horizontalmente el overlay */
+    padding-top: 100px; /* Mantener por el header fijo */
+    box-sizing: border-box; /* Importante para padding y height */
+}
 
-
- .overlay {
-    position: absolute; /* Mantenemos. Cubre el Hero */
+.overlay {
+    position: absolute; /* Cambia a absolute para que se posicione sobre la imagen */
     top: 0;
     left: 0;
-    width: 100%; /* Mantenemos */
-    height: 100%; /* Mantenemos. Asegura que cubra todo el Hero */
-    
-    /* HACEMOS EL CENTRADO FLEXBOX AQUÍ: */
-    display: flex;
+    width: 100%;
+    height: 100%; /* Asegura que el overlay ocupe todo el hero */
+    background-color: rgba(15, 23, 42, 0.6); /* Color y opacidad del overlay */
+    display: flex; /* Para centrar el contenido interno */
     align-items: center; /* Centrado vertical del contenido */
     justify-content: center; /* Centrado horizontal del contenido */
-
-    padding: 0 2rem;
-    box-sizing: border-box;
-    z-index: 2;
+    z-index: 2; /* Para que esté por encima de la imagen */
+    padding: 0 2rem; /* Mantén el padding interno */
+    box-sizing: border-box; /* Importante para el padding */
+}
 
 .hero-content.centered {
     text-align: center;
     color: white;
     max-width: 800px;
-    width: 100%; /* El contenido debe ocupar el ancho completo para centrar su texto */
-    /* Añadimos padding vertical para que no se pegue arriba/abajo en la caja de 800px */
-    padding: 2rem 0; 
+    width: 100%; /* Asegura que ocupe el ancho disponible */
+    /* Elimina cualquier height fijo o max-height si lo tienes */
+    /* height: auto; */
+    /* max-height: none; */
 }
 
 .hero-title {
