@@ -2277,3 +2277,73 @@ section {
 .services-section {
   z-index: 2 !important;
 }
+
+/* ==== FIX DEFINITIVO SECCIÓN HERO Y SERVICIOS ==== */
+
+/* Hero: ajustar alto dinámico y capa */
+.hero {
+  position: relative !important;
+  height: auto !important;           /* ya no ocupa 100vh fijo */
+  min-height: 90vh;                  /* solo asegura buen aspecto en escritorio */
+  padding: 120px 0 80px !important;  /* deja espacio superior e inferior */
+  z-index: 0 !important;
+}
+
+.hero img.hero-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Overlay ajustado */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(15, 23, 42, 0.6);
+  z-index: 0;
+}
+
+/* Hero content sobre el overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sección servicios separada y visible */
+.services-section {
+  position: relative !important;
+  margin-top: 0 !important;
+  padding-top: 100px !important;
+  padding-bottom: 140px !important;
+  background-color: #fefefe !important;
+  z-index: 5 !important;
+  overflow: visible !important;
+}
+
+/* Tarjetas adaptables */
+.service-card {
+  height: auto !important;
+  overflow: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+/* Imagen de tarjeta sin recorte */
+.service-card .hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Responsive mobile específico */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px 60px !important;
+  }
+  .services-section {
+    padding-top: 80px !important;
+    padding-bottom: 160px !important;
+  }
+}
