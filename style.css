@@ -1,6 +1,3 @@
-
-
-
 /* =====================================================
    RESET Y BASE STYLES
    ===================================================== */
@@ -255,7 +252,7 @@ h1, h2, h3, h4, h5, h6 {
    MENÚ MOBILE
    ===================================================== */
 .mobile-menu-btn {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -369,9 +366,13 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   max-width: 800px;
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   z-index: 3;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-title {
@@ -379,9 +380,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   margin-bottom: 1.5rem;
   color: #ede8f0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
   line-height: 1.2;
   opacity: 0;
   transform: translateY(30px);
@@ -393,6 +394,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
   line-height: 1.6;
   color: #ede8f0;
+  max-width: 700px;
+  text-align: center;
 }
 
 @keyframes fadeInUp {
@@ -1111,15 +1114,21 @@ img {
   .hero {
     height: auto;
     min-height: 100dvh;
-    padding: 100px 20px 60px;
+    padding: 100px 1.5rem 60px;
+  }
+
+  .hero-content.centered {
+    padding: 2rem 1rem;
   }
 
   .hero-title {
     font-size: 1.8rem;
+    max-width: 100%;
   }
 
   .hero-description {
     font-size: 1rem;
+    max-width: 100%;
   }
 
   /* Services */
