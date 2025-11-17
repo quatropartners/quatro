@@ -326,8 +326,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-* =====================================================
-   HERO SECTION - CORRECCIÓN
+/* =====================================================
+   HERO SECTION
    ===================================================== */
 .hero {
   position: relative;
@@ -336,7 +336,7 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* Cambiado de flex-start a center */
+  justify-content: flex-start;
   padding: 130px 2rem 80px;
   overflow: hidden;
 }
@@ -364,15 +364,15 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content.centered {
   position: relative;
   z-index: 3;
-  text-align: center; /* Cambiado de left a center */
+  text-align: left;
   color: white;
   max-width: 900px;
   width: 100%;
   padding: 2rem;
-  margin: 0 auto; /* Añadido para centrar */
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Cambiado de flex-start a center */
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1.5rem 0;
   color: #ffffff;
   width: 100%;
-  text-align: center; /* Cambiado de left a center */
+  text-align: left;
   line-height: 1.2;
   opacity: 0;
   transform: translateY(30px);
@@ -396,13 +396,13 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
   max-width: 800px;
   width: 100%;
-  text-align: center; /* Cambiado de left a center */
+  text-align: left;
 }
 
 .hero-buttons {
   display: flex;
   gap: 1rem;
-  justify-content: center; /* Cambiado de flex-start a center */
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
@@ -416,6 +416,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
   }
 }
+
 /* =====================================================
    SERVICES SECTION
    ===================================================== */
@@ -1188,7 +1189,7 @@ img {
   }
 
   /* Hero */
- .hero {
+  .hero {
     height: auto;
     min-height: 100dvh;
     padding: 100px 1.5rem 60px;
@@ -1209,25 +1210,14 @@ img {
     text-align: center;
   }
 
- .hero {
-    height: auto;
-    min-height: 100dvh;
-    padding: 100px 1.5rem 60px;
+  .hero-description {
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+    text-align: center;
+  }
+
+  .hero-buttons {
     justify-content: center;
-  }
-
-  .hero-content.centered {
-    padding: 2rem 1rem;
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.3;
-    margin: 0 0 1.5rem 0;
-    text-align: center;
   }
 
   /* Services */
@@ -1325,7 +1315,6 @@ img {
   }
 
   /* Hero */
-  @media (max-width: 480px) {
   .hero {
     padding: 100px 20px 60px;
   }
@@ -1341,7 +1330,6 @@ img {
   .hero-description {
     font-size: 0.95rem;
   }
-}
 
   /* Texts */
   .section-title,
