@@ -766,7 +766,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 1;
   text-align: center;
-  color: #ffffff;
+  color: #FBF9ED;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -774,7 +774,7 @@ h1, h2, h3, h4, h5, h6 {
 .cta-title {
   font-size: 3rem;
   margin-bottom: 2rem;
-  color: #ffffff;
+  color: #FBF9ED;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -782,7 +782,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.25rem;
   margin-bottom: 3rem;
   opacity: 0.9;
-  color: #ffffff;
+  color: #FBF9ED;
 }
 
 .cta-buttons {
